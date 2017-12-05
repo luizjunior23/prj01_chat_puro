@@ -24,7 +24,7 @@ function login(field)
 			}
 		}
 	};
-	xhttp.open("POST", "./users", true);
+	xhttp.open("POST", "http://www.angelito.com.br/webchat/user", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send(data);
 }
@@ -39,7 +39,7 @@ function reset_users()
 			alert(this.responseText);
 		}
 	};
-	xhttp.open("GET", "./reset_users", true);
+	xhttp.open("GET", "http://www.angelito.com.br/webchat/reset_users", true);
 	xhttp.send();
 }
 
@@ -53,7 +53,7 @@ function reset_messages()
 			alert(this.responseText);
 		}
 	};
-	xhttp.open("GET", "./reset_messages", true);
+	xhttp.open("GET", "http://www.angelito.com.br/webchat/reset_messages", true);
 	xhttp.send();
 }
 
@@ -97,7 +97,7 @@ function get_users()
 			console.log('Carregando usuÃ¡rios conectados...');
 		}
 	};
-	xhttp.open("GET", "./users", true);
+	xhttp.open("GET", "http://www.angelito.com.br/webchat/users", true);
 	xhttp.send();
 }
 
@@ -133,7 +133,7 @@ function get_messages(field)
 			console.log('Carregando mensagens...');
 		}
 	};
-	xhttp.open("GET", "./messages?nickname="+chat_user, true);
+	xhttp.open("GET", "http://www.angelito.com.br/webchat/messages?nickname="+chat_user, true);
 	xhttp.send();
 }
 
@@ -163,7 +163,7 @@ function send_message(field)
 			}
 		}
 	};
-	xhttp.open("POST", "./send", true);
+	xhttp.open("POST", "http://www.angelito.com.br/webchat/send", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send(data);
 }
